@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/adminController.js"></script>
+</head>
+<body>
+
+<center>
+
+
+    <h2>Admin Web Portal</h2>
+
+    <div ng-app="adminApp" class="section">
+        <form ng-controller="adminController" ng-submit="sendData()">
+            <div class="section">
+                <p>Admin Registration</p>
+                <table cellspacing="10px">
+                    <tr>
+                        <td>Name</td>
+                        <td><input class="formfields1" required type="text" ng-model="adminForm.adminName" name="name" placeholder="Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input class="formfields1" required type="email" ng-model="adminForm.adminEmail" name="email" placeholder="example@gmail.com"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input class="formfields1" required type="Password" ng-model="adminForm.adminPassword" name="Password" placeholder="eg:123ab"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input class="formfields1" required type="Password" ng-model="adminForm.confirmPassword" name="Password"></td>
+                    <tr>
+                    <td></td>
+                    <td ng-show="adminForm.adminPassword && adminForm.confirmPassword && adminForm.adminPassword !== adminForm.confirmPassword" ng-style="{color:'red', fontSize: '14Px'}">Password mismatch</td>
+                    </tr>
+                    </tr>
+
+                    <tr>
+                        <td>Contact</td>
+                        <td><input class="formfields1" required type="tel" ng-model="adminForm.adminContactNo" name="contact" placeholder="Phone Number"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Address</td>
+                        <td><input class="formfields1" required type="text" ng-model="adminForm.adminAddress" name="address"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input id="btn1" type="submit" name="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</center>
+
+</body>
+</html>

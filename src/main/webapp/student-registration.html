@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/studentController.js"></script>
+</head>
+
+<body>
+
+<center>
+
+
+    <h2>Student Web portal</h2>
+
+    <div ng-app="studentApp" class="section">
+        <form ng-controller="studentController" ng-submit="sendData()">
+            <div>
+                <p>Student Registration</p>
+                <table cellspacing="10px">
+
+                    <tr>
+                        <td>First Name</td>
+                        <td>
+                            <input class="formfields1" required type="text" ng-model="studentForm.studentFirstName"
+                                   placeholder="First Name">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name</td>
+                        <td>
+                            <input class="formfields1" required type="text" ng-model="studentForm.studentLastName"
+                                   placeholder="Last Name">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Contact</td>
+                        <td>
+                            <input class="formfields1" required type="tel" ng-model="studentForm.studentContactNo"
+                                   placeholder="Phone Number">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input class="formfields1" required type="email" ng-model="studentForm.studentEmail"
+                                   placeholder="example@gmail.com" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input class="formfields1" type="Password" ng-model="studentForm.studentPassword"
+                                   placeholder="password">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input class="formfields1" type="Password" ng-model="studentForm.confirmPassword"></td>
+                    <tr>
+                        <td></td>
+                        <td ng-show="studentForm.studentPassword && studentForm.confirmPassword && studentForm.studentPassword !== studentForm.confirmPassword"
+                            ng-style="{color:'red', fontSize: '14Px'}">Password mismatch
+                        </td>
+                    </tr>
+                    </tr>
+
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            <input class="formfields1" required type="text" ng-model="studentForm.studentAddress">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Payment Status</td>
+                        <td>
+
+
+                            <select id="select1" required ng-model="studentForm.paymentStatus">
+                                <option value="Paid">Paid</option>
+                                <option value="Unpaid">Unpaid</option>
+                            </select>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input id="btn1" type="submit" name="submit" value="Submit"></td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </form>
+    </div>
+
+</center>
+
+</body>
+</html>

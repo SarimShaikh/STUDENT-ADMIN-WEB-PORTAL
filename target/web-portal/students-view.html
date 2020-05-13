@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/adminController.js"></script>
+</head>
+<body>
+
+<div ng-app="adminApp" ng-controller="adminController">
+
+    <h2>Applied Students</h2>
+
+    <button class="logout3" ng-click="_logOut()">Logout</button>
+
+
+    <!--table-->
+    <div class="section3">
+        <table class="grid3">
+            <tbody>
+
+            <tr>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Payment_status</th>
+                <th>Course</th>
+                <th>Course Limit</th>
+            </tr>
+
+            <tr ng-repeat="std in studentCourses">
+                <td>{{std.studentFirstName}}</td>
+                <td>{{std.studentEmail}}</td>
+                <td>{{std.studentContactNo}}</td>
+                <td>{{std.paymentStatus}}</td>
+                <td>{{std.courses.courseName}}</td>
+                <td>{{std.courses.courseLimit}}</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <h2>Student Selected Modules</h2>
+        <center>
+            <table class="grid4">
+
+                <tr>
+                    <th>Module Name</th>
+                    <th>Mendatory</th>
+                </tr>
+                <tbody ng-repeat="std in studentModules">
+                <tr>
+                    <td colspan="2">{{'Student: '+std.studentFirstName}}</td>
+                </tr>
+                <tr ng-repeat="v in std.modules">
+                    <td>{{v.moduleName}}</td>
+                    <td>{{v.isMandatory}}</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </center>
+
+    </div>
+</div>
+
+</body>
+</html>

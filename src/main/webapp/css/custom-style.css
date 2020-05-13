@@ -1,0 +1,212 @@
+body {
+    background-image: url("Strict.bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: verdana;
+    color: white;
+}
+
+.admin-web {
+    text-align: center;
+}
+
+.logout {
+    float: right;
+    margin-right: 65px;
+    border: solid 1px white;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: -50px;
+    height: 35px;
+    width: 70px;
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    margin-top: -50px;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+.section {
+    border: solid 1px white;
+    width: 450px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    float: left;
+}
+
+.formfields {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    padding-left: 25px;
+    color: white;
+    font-size: 18px;
+    background: transparent;
+
+}
+
+.form-select {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    padding-left: 25px;
+    color: black;
+    font-size: 18px;
+    background: transparent;
+    width: 255px;
+}
+
+.formheading {
+    text-align: center;
+}
+
+.form-btn {
+    border: none;
+    border-radius: 3px;
+    padding: 9px;
+    padding-left: 10px;
+    background-color: #48baff;
+    height: 35px;
+    width: 253px;
+    color: white;
+    font-size: 18px;
+}
+
+.grid > tbody > tr > th {
+    border: 1px solid white;
+    padding: 5px;
+    background-color: #48baff;
+}
+
+.grid > tbody > tr > td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+.tb-btn {
+    padding: 5px;
+    background-color: #48baff;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    width: 70px;
+}
+
+.section2 {
+    margin-left: 40px;
+    display: inline-block;
+}
+
+/*select-modules file */
+
+.logout3 {
+    float: right;
+    margin-right: 65px;
+    border: solid 1px white;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: -50px;
+    height: 35px;
+    width: 70px;
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    margin-top: -50px;
+}
+
+h2 {
+    text-align: center;
+    font-family: verdana;
+}
+
+.select-course {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    margin-top: 5px;
+    color: white;
+    font-size: 18px;
+    background: transparent;
+    width: 255px;
+    margin: 0 auto;
+}
+
+.select-course option{
+    background-color: #48baff;
+    color:white;
+}
+.grid3 {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.grid3 > tbody > tr > th {
+    border: 1px solid white;
+    padding: 5px;
+    background-color: #48baff;
+}
+
+.grid3 > tbody > tr > td {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.grid4 {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.grid4 > tbody > tr > th {
+    border: 1px solid white;
+    padding: 5px;
+    background-color: #48baff;
+}
+
+.grid4 > tbody > tr > td {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.tb-btn3 {
+    padding: 5px;
+    background-color: #48baff;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    width: 70px;
+}
+
+.section3 {
+    margin: 0 auto;
+}
+
+.checkbox {
+    text-align: center; /* center checkbox horizontally */
+    vertical-align: middle; /* center checkbox vertically */
+}
+
+.submit {
+    margin-top: 30px;
+    border: solid 1px white;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: -50px;
+    height: 35px;
+    width: 70px;
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    background-color: #48baff;
+
+}

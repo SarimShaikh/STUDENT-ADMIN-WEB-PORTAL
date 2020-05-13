@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Portal</title>
+
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/modulesController.js"></script>
+</head>
+<body>
+
+<div ng-app="moduleApp" ng-controller="modulesController">
+<h2 class="admin-web">Admin Web Portal</h2>
+<button ng-click="_logOut()" class="logout">Logout</button>
+
+<div class="container" class="container">
+    <div class="section">
+        <form ng-submit="sendData()">
+            <p class="formheading">Add Modules</p>
+            <table cellspacing="10px">
+
+                <tr>
+                    <td>Select Courses</td>
+                    <td>
+                        <select ng-model="moduleForm.courseId"
+                                ng-options="course.courseId  as course.courseName for course in courses"
+                                class="form-select">
+                            <!--<option>Select</option>-->
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Module Name</td>
+                    <td>
+                        <input class="formfields" ng-model="moduleForm.moduleName" type="text" name="name"
+                               placeholder="Name" required="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Is Mandatory</td>
+                    <td>
+                        <select ng-model="moduleForm.isMandatory" class="form-select">
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input class="form-btn" type="submit" name="submit" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <!--table-->
+    <div class="section2">
+        <table class="grid">
+            <tbody>
+            <tr>
+                <th>Module ID</th>
+                <th>Module Name</th>
+                <th>Is Mandatory</th>
+                <th colspan="2">Actions</th>
+            </tr>
+            <tbody ng-repeat="module in modules">
+            <tr>
+                <td colspan="3"> {{ module.courseName }} </td>
+                <td colspan="2"> {{ module.courseLimit }} </td>
+            </tr>
+            <tr ng-repeat="item in module.modules">
+                <td> {{ item.moduleId }}</td>
+                <td>{{ item.moduleName }}</td>
+                <td>{{ item.isMandatory }}</td>
+                <td><input class="tb-btn" type="button" ng-click="editModule(item, module)" value="update"></td>
+                <td><input class="tb-btn" type="button" ng-click="deleteModule(item)" value="delete"></td>
+            </tr>
+            </tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

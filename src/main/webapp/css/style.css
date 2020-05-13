@@ -1,0 +1,132 @@
+/* index file */
+
+body{
+  background-image: url("Strict.hand.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  font-family: verdana;
+}
+
+
+h1{
+	padding-top: 150px;
+	color: white;
+	font-size: 40px;
+}
+
+.logout{
+    float: right;
+    margin-right: 65px;
+    border: solid 1px white;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: -50px;
+    height: 35px;
+    width: 70px; 
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    margin-top: -10px;
+}
+
+.btn{
+ 	
+     border-radius: 3px;
+     background: #48baff;
+     border: none;
+     height: 35px;
+     color: white;
+     width: 130%;
+     font-size: 18px;
+}
+
+
+/* admin and student file */
+.section , h2{
+	color: white;
+	font-size: 18px;
+
+}
+
+
+.section{
+	border: solid 1px white;
+	border-radius: 5px; 
+	width: 500px;
+
+	
+}
+
+.formfields1{  
+     padding: 9px;
+     border-radius: 3px;
+     background: transparent;
+     border: 1px solid;
+     border-color: white;
+     height: 15px;
+     color: white;
+     width: 110%;
+
+ }
+
+ #btn1{
+ 	padding: 9px;
+     border-radius: 3px;
+     background: #48baff;
+     border: none;
+     height: 35px;
+     color: white;
+     width: 120%;
+}
+
+
+#select1{
+	 padding: 0.6em 1.4em 0.5em 0.8em;
+     border-radius: 3px;
+     background: transparent;
+     border: 1px solid;
+     border-color: white;
+     line-height: 1.3px;
+     color: white;
+     width: 120%;
+     max-width: 120%;
+     margin: 0;
+ }
+
+
+ /* login file */
+
+.formfields2{
+ 	 padding: 9px;
+     border-radius: 3px;
+     background: transparent;
+     border: 1px solid;
+     border-color: white;
+     height: 15px;
+     color: white;
+     width: 200px;
+ }
+
+
+ .login-section{
+ 	border: solid 1px white;
+	border-radius: 5px; 
+	width: 400px;
+	color: white;
+	padding-bottom: 8px;
+}
+
+
+.login{
+      padding: 9px;
+     border-radius: 3px;
+     background: #48baff;
+     border: none;
+     height: 35px;
+     color: white;
+     width: 100%;
+
+ }
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/selectModulesController.js"></script>
+</head>
+<body>
+
+<div ng-app="selectModulesApp" ng-controller="selectModulesController">
+    <form ng-submit="sendData()">
+        <h2>Select Courses</h2>
+        <center>
+            <select ng-options="course.courseName for course in courses" ng-change="onCourseChange()"
+                    ng-model="courseSelected" value="{{course.courseId}}"
+                    class="select-course">
+                <option>Select Course</option>
+            </select>
+        </center>
+        <button ng-click="_logOut()" class="logout3">Logout</button>
+
+
+        <!--table-->
+        <div class="section3">
+            <table class="grid3">
+                <tbody>
+
+                <tr>
+                    <th>Module ID</th>
+                    <th>Module Name</th>
+                    <th>Mendatory</th>
+                    <th>Select Modules</th>
+                </tr>
+
+                <tbody ng-repeat="course in filterCourses">
+                <tr>
+                    <td colspan="2">{{'Course: '+course.courseName}}</td>
+                    <td colspan="2">{{'Limit: '+course.courseLimit +' month'}}</td>
+                </tr>
+                <tr ng-repeat="item in course.modules">
+                    <td>{{item.moduleId}}</td>
+                    <td>{{item.moduleName}}</td>
+                    <td>{{item.isMandatory}}</td>
+                    <td class="checkbox">
+                        <input type="checkbox"
+                               value="{{item}}"
+                               ng-checked="selection.indexOf(item) > -1"
+                               ng-click="toggleSelection(item)"
+                               checklist-comparator="compareFn">
+                    </td>
+
+                </tr>
+                </tbody>
+                </tbody>
+            </table>
+            <center>
+                <button class="submit" type="submit">Submit</button>
+            </center>
+
+            <h2>Selected courses list</h2>
+            <center>
+                <table class="grid4">
+                    <tbody>
+                    <tr>
+                        <th>Module ID</th>
+                        <th>Module Name</th>
+                        <th>Mendatory</th>
+                    </tr>
+                    <tbody ng-repeat="course in selectModules">
+                    <tr>
+                        <td colspan="2">{{'Course: '+course.courseName}}</td>
+                        <td colspan="2">{{'Limit: '+course.courseLimit +' month'}}</td>
+                    </tr>
+                    <tr ng-repeat="v in course.modules">
+                        <td>{{v.moduleId}}</td>
+                        <td>{{v.moduleName}}</td>
+                        <td>{{v.isMandatory}}</td>
+
+                    </tr>
+                    </tbody>
+                    </tbody>
+                </table>
+            </center>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

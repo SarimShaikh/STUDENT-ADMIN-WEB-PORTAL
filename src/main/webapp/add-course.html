@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/coursesController.js"></script>
+</head>
+<body>
+
+
+<h2 class="admin-web">Admin Web Portal</h2>
+<button class="logout">Logout</button>
+
+<div class="container" ng-app="courseApp" ng-controller="courseController">
+
+    <div class="section">
+        <form ng-submit="sendData()">
+            <p class="formheading">Add Courses</p>
+            <table cellspacing="10px">
+                <tr>
+                    <td>Course Name</td>
+                    <td><input class="formfields" type="text" ng-model="courseForm.courseName" placeholder="Name"
+                               required=""></td>
+                </tr>
+                <tr>
+                    <td>Course Description</td>
+                    <td><input class="formfields" type="text" ng-model="courseForm.courseDescription"
+                               placeholder="Description" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course_Limit</td>
+                    <td><input class="formfields" type="number" ng-model="courseForm.courseLimit" placeholder="Limit"
+                               required="" min="1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input class="form-btn" type="submit" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <!--table-->
+    <div class="section2">
+        <table class="grid">
+            <tbody>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Course Limit</th>
+                <th colspan="2">Actions</th>
+            </tr>
+
+            <tr ng-repeat="course in courses">
+                <td>{{ course.courseId }}</td>
+                <td>{{ course.courseName }}</td>
+                <td>{{ course.courseDescription }}</td>
+                <td>{{ course.courseLimit +' month'}}</td>
+                <td><input class="tb-btn" type="button" ng-click="editCourse(course)" value="update"></td>
+                <td><input class="tb-btn" type="button" name="" value="delete"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

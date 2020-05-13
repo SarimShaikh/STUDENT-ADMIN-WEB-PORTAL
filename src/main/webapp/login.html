@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="js/Angular.js"></script>
+    <script type="text/javascript" src="js/loginController.js"></script>
+</head>
+<body>
+
+<center>
+
+
+    <h2>Student Web Portal</h2>
+
+
+    <div ng-app="loginApp" class="login-section">
+        <p>Login or Register</p>
+        <form ng-controller="loginController" ng-submit="sendData()">
+            <table cellspacing="10px">
+
+                <tr>
+                    <td><input class="formfields2" required type="email" ng-model="loginForm.username" name="email" placeholder="example@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><input class="formfields2" required type="Password" ng-model="loginForm.password" name="Password" placeholder="eg:123ab"></td>
+                </tr>
+                <tr>
+                    <td>Login as</td>
+                </tr>
+                <tr>
+                    <td> Admin<input type="radio" ng-model="loginForm.type" name="type" required  value="A">
+                        Student<input type="radio" ng-model="loginForm.type" name="type"  value="S"></td>
+                </tr>
+                <tr>
+                    <td><input class="login" type="submit" name="login" value="Login"></td>
+                </tr>
+            </table>
+        </form>
+
+
+    </div>
+
+
+</center>
+
+</body>
+</html>
